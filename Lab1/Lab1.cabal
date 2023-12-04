@@ -1,0 +1,97 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           Lab1
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/Lab1#readme>
+homepage:       https://github.com/githubuser/Lab1#readme
+bug-reports:    https://github.com/githubuser/Lab1/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2023 Author name here
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/Lab1
+
+library
+  exposed-modules:
+      Competition
+      Converter
+      Lib
+      SportSection
+      SQLConnection
+      Students
+      Table
+      Teachers
+      TrainingSchedule
+      ValidateTables
+  other-modules:
+      Paths_Lab1
+  autogen-modules:
+      Paths_Lab1
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , binary ==0.8.9.1
+    , bytestring ==0.11.5.2
+    , haskeline ==0.8.2
+    , io-streams
+    , text >=2.0
+    , time >=1.12
+    , utf8-string ==1.0.2
+  default-language: Haskell2010
+
+executable Lab1-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Lab1
+  autogen-modules:
+      Paths_Lab1
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Lab1
+    , base >=4.7 && <5
+    , binary ==0.8.9.1
+    , bytestring ==0.11.5.2
+    , haskeline ==0.8.2
+    , io-streams
+    , text >=2.0
+    , time >=1.12
+    , utf8-string ==1.0.2
+  default-language: Haskell2010
+
+test-suite Lab1-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_Lab1
+  autogen-modules:
+      Paths_Lab1
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Lab1
+    , base >=4.7 && <5
+    , binary ==0.8.9.1
+    , bytestring ==0.11.5.2
+    , haskeline ==0.8.2
+    , io-streams
+    , text >=2.0
+    , time >=1.12
+    , utf8-string ==1.0.2
+  default-language: Haskell2010
